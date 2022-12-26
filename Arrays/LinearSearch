@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+int check(int a[],int n,int key){
+    int num;
+    for(int i=0;i<n;i++){
+        if(key==a[i]){
+            num=i+1;
+            return num;
+        }
+    }
+    return -1;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    int key;
+    cin>>key;
+    int ans=check(a,n,key);
+    cout<<"Item found at index: "<<ans;
+    return 0;
+}
